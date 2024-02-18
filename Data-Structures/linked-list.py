@@ -1,24 +1,29 @@
+class Node:
+    def __init__(self, value=None):
+        self.value = value
+        self.next = None
+
 class LinkedList:
     def __init__(self):
-        self.head = Node(None)
+        self.head = Node()
         self.size = 0
 
-    def insert(self, prevNode, value):
+    def insert(self, prev_node, value):
         newNode = Node(value)
-        newNode.next = prevNode.next
-        prevNode.next = newNode
+        newNode.next = prev_node.next
+        prev_node.next = newNode
         self.size += 1
 
-    def delete(self, prevNode):
+    def delete(self, prev_node):
         if self.size == 0:
             return
-        prevNode.next = prevNode.next.next
+        prev_node.next = prev_node.next.next
         self.size -= 1
 
     def traverse(self):
-        cur = self.head
-        while cur.next:
-            yield cur.next
+        cur = self.head.next
+        while cur:
+            yield cur
             cur = cur.next
 
 ll = LinkedList()
