@@ -2,7 +2,7 @@
 	"markdown cell template": {
 		"prefix": "note",
 		"body": [
-			"# $TM_FILENAME_BASE",
+			"# ${TM_FILENAME_BASE/[-_]/ /g}",
 			"",
 			"출처: ",
 			"",
@@ -34,7 +34,7 @@
 		  "   \"cell_type\": \"markdown\",",
 		  "   \"metadata\": {},",
 		  "   \"source\": [",
-		  "    \"# $TM_FILTENAME_BASE\",",
+		  "    \"# ${TM_FILENAME_BASE/[-_]/ /g}\",",
 		  "    \"\",",
 		  "    \"출처: \",",
 		  "    \"\",",
