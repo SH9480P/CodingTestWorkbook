@@ -31,6 +31,9 @@
 			"### 기타 코멘트",
 			".",
 			"",
+			"### 코드",
+			"```python",
+			"```",
 		  ],
 		"description": "Add a description template for the problem and solutions"
 	},
